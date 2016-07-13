@@ -1,0 +1,212 @@
+[
+  {
+    "imageUrl": "./img/czekolada-milka.jpg",
+    "name": "CZEKOLADA MLECZNA",
+    "brand": "MILKA",
+    "info": "bardzo smaczna i puszna",
+    "discount": "22",
+    "number": "75",
+    "price": "2.99",
+    "category": "Sweets"
+  },
+  {
+    "imageUrl": "./img/wafle-milka-wafelini.jpg",
+    "name": "WAFLE MILKA WAFELINI",
+    "brand": "MILKA",
+    "info": "bardzo chrupionce, 496 g, różne rodzaje",
+    "discount": "42",
+    "number": "56",
+    "price": "25.99",
+    "category": "Sweets"
+  },
+  {
+    "imageUrl": "./img/ciastka-milka-premium.jpg",
+    "name": "CIASTKA MILKA PREMIUM",
+    "brand": "MILKA",
+    "info": "różne rodzaje i gramatury kupujac 1 op 6,99 zł/op., kupujac 2 op 5 zl/op. cena jedn. przy zakupie 2 op 184 g 27,17 zł/kg, kupując 2 op. 10.00 zł",
+    "discount": "27",
+    "number": "62",
+    "price": "10.00",
+    "category": "Sweets"
+  },
+  {
+    "imageUrl": "./img/cukierki-mieszko.jpg",
+    "name": "CUKIERKI MICHASZKI",
+    "brand": "MIESZKO",
+    "info": "220–230 g, paczka, różne rodzaje cena jedn. np. 230 g 33,43 zł/kg",
+    "discount": "0",
+    "number": "23",
+    "price": "8.59",
+    "category": "Sweets"
+  },
+  {
+    "imageUrl": "./img/dz-em-uowicz.jpg",
+    "name": "DŻEM TRUSKAWKOWY",
+    "brand": "ŁOWICZ",
+    "info": "280 g, różne rodzaje, w promocji nie bierze udziału dżem Łowicz o smaku jagodowym i malinowym",
+    "discount": "3",
+    "number": "178",
+    "price": "2.99",
+    "category": "Sweets"
+  },
+  {
+    "imageUrl": "./img/mas-eo-orzechowe-felix.jpg",
+    "name": "MASŁO ORZECHOWE",
+    "brand": "FELIX",
+    "info": "350 g, różne rodzaje",
+    "discount": "17",
+    "number": "34",
+    "price": "8.49",
+    "category": "Sweets"
+  },
+  {
+    "imageUrl": "./img/szynka-wieprzowa-bez-kos-uci.jpg",
+    "name": "SZYNKA WIEPRZOWA BEZ KOŚCI",
+    "brand": "TESCO",
+    "info": "luz, duża paczka vacuum",
+    "discount": "23",
+    "number": "28",
+    "price": "12.99",
+    "category": "Meet"
+  },
+  {
+    "imageUrl": "./img/filet-z-indyka.jpg",
+    "name": "FILET Z INDYKA",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "0",
+    "number": "154",
+    "price": "20.99",
+    "category": "Meet"
+  },
+  {
+    "imageUrl": "./img/mie-eso-z-udz-uca-indyczego.jpg",
+    "name": "SMIĘSO Z UDŹCA INDYCZEGO",
+    "brand": "TESCO",
+    "info": "luz, duża paczka vacuum",
+    "discount": "55",
+    "number": "89",
+    "price": "17.49",
+    "category": "Meet"
+  },
+  {
+    "imageUrl": "./img/wo-eowina-na-pieczen-u.jpg",
+    "name": "WOŁOWINA NA PIECZEŃ",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "0",
+    "number": "72",
+    "price": "20.99",
+    "category": "Meet"
+  },
+  {
+    "imageUrl": "./img/arbuz.jpg",
+    "name": "ARBUZ",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "12",
+    "number": "1500",
+    "price": "0.99",
+    "category": "Fruits"
+  },
+  {
+    "imageUrl": "./img/skarby-ziemi-jagody-goj.jpg",
+    "name": "JAGODY GOJI",
+    "brand": "SKARBY ZIEMI",
+    "info": "150 g",
+    "discount": "10",
+    "number": "890",
+    "price": "15.99",
+    "category": "Fruits"
+  },
+  {
+    "imageUrl": "./img/wo-eowina-na-pieczen-u.jpg",
+    "name": "WOŁOWINA NA PIECZEŃ",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "0",
+    "number": "72",
+    "price": "20.99",
+    "category": "Meet"
+  },
+  {
+    "imageUrl": "./img/nektarynki.jpg",
+    "name": "NEKTARYNKI",
+    "brand": "TESCO",
+    "info": "1 kg, koszyk",
+    "discount": "26",
+    "number": "34",
+    "price": "3.99",
+    "category": "Fruits"
+  },
+  {
+    "imageUrl": "./img/winogrona-bia-ee.jpg",
+    "name": "WINOGRONA BIAŁE",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "56",
+    "number": "19",
+    "price": "7.99",
+    "category": "Fruits"
+  },
+  {
+    "imageUrl": "./img/brzoskwinie-ciasteczkowe.jpg",
+    "name": "BRZOSKWINIE CIASTECZKOWE",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "34",
+    "number": "9",
+    "price": "3.99",
+    "category": "Fruits"
+  },
+  {
+    "imageUrl": "./img/pomidor-cherry-na-gronie.jpg",
+    "name": "POMIDOR CHERRY NA GRONIE",
+    "brand": "TESCO",
+    "info": "500 g",
+    "discount": "0",
+    "number": "93",
+    "price": "4.99",
+    "category": "Vegetables"
+  },
+  {
+    "imageUrl": "./img/cukinia.jpg",
+    "name": "CUKINIA",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "10",
+    "number": "29",
+    "price": "1.99",
+    "category": "Vegetables"
+  },
+  {
+    "imageUrl": "./img/papryka-czerwona.jpg",
+    "name": "PAPRYKA CZERWONA",
+    "brand": "TESCO",
+    "info": "luz",
+    "discount": "15",
+    "number": "64",
+    "price": "8.99",
+    "category": "Vegetables"
+  },
+  {
+    "imageUrl": "./img/pepsi-cola-p.jpg",
+    "name": "PEPSI COLA",
+    "brand": "PEPSI",
+    "info": "4 x 2 l",
+    "discount": "35",
+    "number": "85",
+    "price": "19.96",
+    "category": "Drinks"
+  },
+  {
+    "imageUrl": "./img/napoje-coca-cola-fanta-sprite2.jpg",
+    "name": "NAPOJE COCA-COLA, FANTA, SPRITE (2 L)",
+    "brand": "COCA-COLA",
+    "info": "2 l, różne rodzaje kupując 1 op. 4,49 zł/op. kupując 3 op. 4,00 zł/op. cena jedn. przy zakupie 3 op. 2,00 zł/l, kupując 3 op. 12.00 zł",
+    "discount": "14",
+    "number": "79",
+    "price": "12",
+    "category": "Drinks"
+  }
+]

@@ -1,0 +1,179 @@
+body{
+    font-family: 'Questrial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*for item start*/
+.item{
+    border: 1px solid #ddd;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .board,
+    .modify{
+        width: 100%;
+    }
+}
+
+.item:after{
+    clear: both;
+    content: ' ';
+    display:block;
+}
+/*for item start*/
+
+/*for info block start*/
+.info-part img{
+    max-width: 100%;
+}
+
+.product-name{
+    margin: 5px 0 0 0;
+    word-wrap: break-word;
+}
+
+.product-brand{
+    font-size: 17px;
+}
+
+.product-details{
+    margin-top: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.product-details .info-sign{
+    color: #337ab7;
+    top: 3px;
+}
+
+.discount{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+    border-radius: 49px;
+    width: 80px;
+    height: 80px;
+}
+
+.discount.hight-discount{
+    background-color: #75B8D4;
+}
+
+.discount.medium-discount{
+    background-color: #286090;
+}
+
+.discount.basic-discount{
+    background-color: #658C7A;
+}
+
+.discount p{
+    font-size: 32px;
+    line-height: 23px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.availability-info:after,
+.product-info:after{
+    clear: both;
+    content: ' ';
+    display:block;
+}
+
+.product-info{
+    height: 100%;
+}
+
+.product-info img{
+    margin: 10px 0;
+}
+
+.availability-info{
+    margin-top: -40px;
+}
+
+.progress{
+    padding: 0;
+}
+
+.medium-availability{
+    background-color: #f0ad4e;
+}
+
+.low-availability{
+    background-color: #d9534f;
+}
+
+[data-id="tooltip"]{
+    width: 200px!important;
+}
+/*for info block finish*/
+
+/*for price start*/
+.price-part{
+    background-color: rgba(238, 238, 238, 0.5);
+    padding-bottom: 15px;
+}
+
+.price-part:before{
+    content: ' ';
+    width: 1px;
+    height: 20px;
+    display: block;
+    background: radial-gradient(ellipse at center, #bbb 0%,#fff 100%);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: auto;
+    height: calc(100% - 40px);
+}
+
+.price-wrapper{
+    font-size: 24px;
+}
+
+.price-wrapper span{
+    font-size: 14px;
+}
+
+.price-wrapper .old-price{
+    color: grey;
+}
+
+.counter > span{
+    line-height: 31px;
+}
+
+.counter .form-control{
+    display: inline-block;
+    width: calc(100% - 80px);
+    margin: 0 10px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.add-to-basket{
+    margin-top: 20px;
+}
+/*for price finish*/
+
+/*for modify section start*/
+.select .btn-default span{
+    text-align: left;
+}
+
+.select .btn-default.focus, .btn-default:focus{
+    background-color: #fff;
+}
+/*for modify section finish*/
+

@@ -1,0 +1,21 @@
+/*bootstrap addons start*/
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+.mtb-10{
+    margin: 10px 0;
+}
+
+.vertical-aligner-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*bootstrap addons start*/

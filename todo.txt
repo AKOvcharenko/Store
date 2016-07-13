@@ -1,0 +1,2 @@
+check how i can minimize core.js
+fix css for ie 10
