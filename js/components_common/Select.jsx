@@ -1,6 +1,6 @@
 var React = require('react');
 var store = require('./../store/store.js');
-var actionFilteState = require('./../actions/actionFilterState.js');
+var actionFilterState = require('./../actions/actionFilterState.js');
 var actionModifyList = require('./../actions/actionModifyList.js');
 
 
@@ -10,7 +10,7 @@ var Select = React.createClass({
     },
     changeHandler: function(event) {
         var select = event.target;
-        store.dispatch(actionFilteState(select.id, select.value));
+        store.dispatch(actionFilterState(select.id, select.value));
         store.dispatch(actionModifyList(store.getState().filterState));
     },
     render: function(){
