@@ -1,26 +1,27 @@
-function counterIncrement(itemId, value){
+function counterIncrement(sku){
     return {
         type: "CounterIncrement",
-        itemId: itemId,
-        value: value,
-        minusState: minusState,
-        plusState: plusState,
-        increment: true
+        sku: sku
     }
 }
 
-function counterDecrement(itemId, value){
+function counterDecrement(sku){
     return {
         type: "CounterDecrement",
-        itemId: itemId,
-        value: value,
-        minusState: minusState,
-        plusState: plusState,
-        increment: false
+        sku: sku
     }
 }
 
-module_exports = {
+function setCounter(){
+    return {
+        type: "SetInitialCounterState",
+        items: require('./../../data.json')
+    }
+}
+
+
+module.exports = {
     counterDecrement: counterDecrement,
-    counterIncrement: counterIncrement
+    counterIncrement: counterIncrement,
+    setCounter: setCounter
 };

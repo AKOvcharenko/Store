@@ -13,7 +13,7 @@ var Item = React.createClass({
                                   discount={this.props.discount}>
 
                     </ItemInfoPart>
-                    <PurchasePart className="col-sm-4" price={this.props.price}
+                    <PurchasePart sku={this.props.sku} className="col-sm-4" price={this.props.price}
                                   discount={this.props.discount}>
                     </PurchasePart>
                 </div>);
