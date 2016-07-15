@@ -1,5 +1,3 @@
-
-
 function storeFiltersState(state, filterType, value){
     var result = Object.assign({}, state);
     

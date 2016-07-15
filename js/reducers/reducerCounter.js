@@ -1,5 +1,4 @@
 function changeState(state, sku, summand){
-    debugger;
     var value;
     var changedCounter;
     var result = state.slice();
@@ -30,7 +29,6 @@ function initialState(data){
 
 function counterState(state, action){
     state = state || [];
-    //{value: 1, minusDisable: 'disabled', plusDisabled: ''};
     switch (action.type) {
         case "SetInitialCounterState":
             return initialState(action.items);

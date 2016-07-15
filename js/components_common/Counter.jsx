@@ -10,11 +10,6 @@ function mapStateToProps(state) {
 }
 
 var Counter = React.createClass({
-    determineCounterData: function(){
-        var counterState = this.props.counterState;
-        var sku = this.props.sku;
-        return counterState.slice().filter(function(el){if(el.sku === sku){return true;} return false;})[0];
-    },
     changeQuantity : function(event){
         var button = event.currentTarget;
         var type = button.getAttribute('data-type');
@@ -22,7 +17,7 @@ var Counter = React.createClass({
     },
     emptyFunc: function(){/*i created it because without onChange attr, input throw annoing notification*/},
     render: function(){
-        var counterData = this.determineCounterData();
+        var counterData = this.props.determineCounterData();
         return (<div className="counter row ">
                     <span className="col-sm-4 text-center">Quantity</span>
                     <div className="col-sm-8">
