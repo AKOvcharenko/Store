@@ -28,14 +28,8 @@ function initialPLPState(data){
 }
 
 function initialBPState(data){
-    var result =  data.map(function(item){
-        return {
-            sku: item.sku,
-            value: 1,
-            minusDisabled: 'disabled',
-            plusDisabled: ''
-        }
-    });
+    var result =  data.slice();
+    debugger;
     return result;
 }
 
@@ -44,7 +38,7 @@ function counterState(state, action){
     switch (action.type) {
         case "SetInitialPLPCounterState":
             return initialPLPState(action.items);
-        case "SetInitialBasketCounterState":
+        case "SetInitialBPCounterState":
             return initialBPState(action.items);
         case "CounterIncrement":
             return changeState(state, action.sku, 1);

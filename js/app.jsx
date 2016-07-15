@@ -1,9 +1,9 @@
 var ReactDOM = require('react-dom');
 var ReactRedux = require('react-redux');
-var Shop = require('./component_shop/Shop.jsx');
-var Provider = ReactRedux.Provider;
-var store = require('./store/store.js');
+var Routing = require('./routes/routes.jsx');
 
 
-ReactDOM.render(<Provider store={store}><Shop/></Provider>,document.getElementById('wrapper'));
+
+ReactDOM.render(Routing,document.getElementById('wrapper'));
+//ReactDOM.render(<Provider store={store}><Shop/></Provider>,document.getElementById('wrapper'));
 

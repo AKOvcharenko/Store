@@ -13,7 +13,7 @@ var CartItem = React.createClass({
                         <span className="product-brand">{this.props.brand}</span>
                     </div>
                     <div className="col-sm-4 vertical-aligner-center">
-                        <Counter/>
+                        <Counter sku={this.props.sku}/>
                     </div>
                     <div className="col-sm-4 mtb-10 vertical-aligner-center">
                         <div>

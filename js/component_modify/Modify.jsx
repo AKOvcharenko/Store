@@ -12,14 +12,13 @@ var Modify = React.createClass({
         store.dispatch(actionModifyList(this.props.filterState));
     },
     render: function(){
+        debugger;
         return (<div className="modify col-sm-2">
                     <Search changeHandler={this.changeHandler}/>
-                    <Filter fullItemsList={this.props.fullItemsList}
-                            changeHandler={this.changeHandler}
+                    <Filter changeHandler={this.changeHandler}
                             id="filterCat"
                             type="category"/>
-                    <Filter fullItemsList={this.props.fullItemsList}
-                            changeHandler={this.changeHandler}
+                    <Filter changeHandler={this.changeHandler}
                             id="filterBrand"
                             type="brand"/>
                     <Sort changeHandler={this.changeHandler}

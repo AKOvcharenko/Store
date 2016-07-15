@@ -11,6 +11,7 @@ function mapStateToProps(state) {
 
 var Counter = React.createClass({
     determineCounterData: function(){
+        
         var counterState = this.props.counterState;
         var sku = this.props.sku;
         return counterState.slice().filter(function(el){if(el.sku === sku){return true;} return false;})[0];

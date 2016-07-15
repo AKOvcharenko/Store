@@ -2,7 +2,7 @@ var React = require('react');
 var ReactRedux = require('react-redux');
 var CartItem = require('./CartItem');
 var store = require('./../store/store.js');
-var actionAddToBasket = require('./../actions/actionAddToBasket.js');
+var actionCounter = require('./../actions/actionCounter.js');
 
 
 function mapStateToProps(state) {
@@ -13,20 +13,19 @@ function mapStateToProps(state) {
 
 var Cart = React.createClass({
     componentWillMount: function(){
-        debugger
-        //store.dispatch(actionCounter.setPLPCounter());
+        debugger;
+        store.dispatch(actionCounter.setBPCounter(this.props.cartState));
     },
     shouldComponentUpdate: function(){
-        debugger
+        debugger;
+        store.dispatch(actionCounter.setBPCounter(this.props.cartState));
         return true;
     },
     defineId: function(){
         this.uniqueId = this.uniqueId || 0;
         return this.uniqueId++;
 
-        /*return (<div className="cart">
-         {this.props.fullItemsList.map(this.eachItem)}
-         </div>)*/
+
     },
     eachItem: function(elem){
         return (<CartItem imageUrl={elem.imageUrl}
@@ -34,14 +33,15 @@ var Cart = React.createClass({
                       brand={elem.brand}
                       discount={elem.discount}
                       price={elem.price}
+                      sku={elem.sku}                              
                       key={this.defineId()}>
                 </CartItem>)
     },
     render: function(){
-        debugger;
         if(this.props.cartState.length){
-            return <p>Basket is fuly</p>
-
+            return (<div className="cart">
+                        {this.props.cartState.map(this.eachItem)}
+                     </div>)
         }
 
         return <p>Basket is empty</p>

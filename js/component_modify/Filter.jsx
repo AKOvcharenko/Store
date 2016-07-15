@@ -1,7 +1,13 @@
 var React = require('react');
+var fullList = require('./../../data.json');
 var Select = require('./../components_common/Select.jsx');
 
 var Filter = React.createClass({
+    getDefaultProps: function(){
+        return {
+            fullItemsList: fullList
+        }
+    },
     getOptions: function(){
         var type = this.props.type;
         var firstOption = 'Select a ' + type;
@@ -12,6 +18,7 @@ var Filter = React.createClass({
         return options;
     },
     render: function(){
+        debugger;
         return (<div className="filter">
                     <div className="form-group">
                         <label htmlFor={this.props.id}>Filter By {this.props.type}</label>

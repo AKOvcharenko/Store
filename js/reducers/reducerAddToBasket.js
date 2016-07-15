@@ -1,15 +1,24 @@
+var data = require('./../../data.json');
+
+function determineFullItemParams(sku, number){
+    var itemInfo = data.filter(function(el){if(el.sku === sku){addedItem = el; return true;} return false;})[0];
+    var result = Object.assign({}, itemInfo);
+    result.value = number;
+    result.minusDisabled = '';
+    result.plusDisabled = '';
+    return result;
+}
+
 function modifyCartState(state, sku, number){
-    debugger
     var addedItem;
     var alreadyInBasket;
     var result = state.slice();
 
     result = result.filter(function(el){if(el.sku === sku){addedItem = el; return false;} return true;});
-    addedItem = addedItem ? addedItem : {};
-    alreadyInBasket = addedItem[sku] || 0;
-    addedItem[sku] = alreadyInBasket + number;
-    result.push(addedItem);
-
+    alreadyInBasket = addedItem ? addedItem.value : 0;
+    alreadyInBasket += number;
+    result.push(determineFullItemParams(sku, number));
+debugger;
     return result;
 }
 

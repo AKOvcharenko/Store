@@ -19,9 +19,17 @@ function setPLPCounter(){
     }
 }
 
+function setBPCounter(addedList){
+    return {
+        type: "SetInitialBPCounterState",
+        items: addedList
+    }
+}
+
 
 module.exports = {
     counterDecrement: counterDecrement,
     counterIncrement: counterIncrement,
-    setPLPCounter: setPLPCounter
+    setPLPCounter: setPLPCounter,
+    setBPCounter: setBPCounter
 };
