@@ -12,9 +12,9 @@ function counterDecrement(sku){
     }
 }
 
-function setCounter(){
+function setPLPCounter(){
     return {
-        type: "SetInitialCounterState",
+        type: "SetInitialPLPCounterState",
         items: require('./../../data.json')
     }
 }
@@ -23,5 +23,5 @@ function setCounter(){
 module.exports = {
     counterDecrement: counterDecrement,
     counterIncrement: counterIncrement,
-    setCounter: setCounter
+    setPLPCounter: setPLPCounter
 };

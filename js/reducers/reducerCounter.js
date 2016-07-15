@@ -15,7 +15,19 @@ function changeState(state, sku, summand){
     return result;
 }
 
-function initialState(data){
+function initialPLPState(data){
+    var result =  data.map(function(item){
+        return {
+            sku: item.sku,
+            value: 1,
+            minusDisabled: 'disabled',
+            plusDisabled: ''
+        }
+    });
+    return result;
+}
+
+function initialBPState(data){
     var result =  data.map(function(item){
         return {
             sku: item.sku,
@@ -30,8 +42,10 @@ function initialState(data){
 function counterState(state, action){
     state = state || [];
     switch (action.type) {
-        case "SetInitialCounterState":
-            return initialState(action.items);
+        case "SetInitialPLPCounterState":
+            return initialPLPState(action.items);
+        case "SetInitialBasketCounterState":
+            return initialBPState(action.items);
         case "CounterIncrement":
             return changeState(state, action.sku, 1);
         case "CounterDecrement":

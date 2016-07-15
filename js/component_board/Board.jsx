@@ -16,7 +16,7 @@ var Board = React.createClass({
         return this.uniqueId++;
     },
     componentWillMount: function(){
-        store.dispatch(actionCounter.setCounter());
+        store.dispatch(actionCounter.setPLPCounter());
     },
     eachItem: function(elem, index){
         return (<Item imageUrl={elem.imageUrl}
