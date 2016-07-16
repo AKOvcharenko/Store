@@ -17,8 +17,8 @@ function changeState(state, sku, summand){
     return result;
 }
 
-function initialPLPState(data){
-    var result =  data.map(function(item){
+function initialPLPState(state, data){
+    var result = data.map(function(item){
         return {
             sku: item.sku,
             value: 1,
@@ -29,8 +29,22 @@ function initialPLPState(data){
     return result;
 }
 
-function initialBPState(data){
-    var result =  data.slice();
+function initialBPState(state, data){
+    var result =  state.slice();
+    data.forEach(function(el){
+        var matched;
+        result = result.filter(function(instance){
+            if(instance.sku === el.sku){
+                matched = instance;
+                return false;
+            }
+            return true;
+        });
+        matched.value = el.value;
+        matched.minusDisabled = el.value > 1 ? '' : 'disabled';
+        matched.plusDisabled = el.value < 99 ? '' : 'disabled';
+        result.push(matched);
+    });
     return result;
 }
 
@@ -38,7 +52,7 @@ function counterState(state, action){
     state = state || [];
     switch (action.type) {
         case "SetInitialPLPCounterState":
-            return initialPLPState(action.items);
+            return initialPLPState(state, action.items);
         case "SetInitialBPCounterState":
             return initialBPState(state, action.items);
         case "CounterIncrement":

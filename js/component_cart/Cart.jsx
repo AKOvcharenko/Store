@@ -16,10 +16,6 @@ var Cart = React.createClass({
     componentWillMount: function(){
         store.dispatch(actionCounter.setBPCounter(this.props.cartState));
     },
-    shouldComponentUpdate: function(){
-        store.dispatch(actionCounter.setBPCounter(this.props.cartState));
-        return true;
-    },
     defineId: function(){
         this.uniqueId = this.uniqueId || 0;
         return this.uniqueId++;

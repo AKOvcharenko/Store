@@ -31,6 +31,7 @@ var CartItem = React.createClass({
     },
     render: function(){        
         var item = this.determineItem();
+
         return (<div className="cart-item">
                     <div className="mtb-10 col-sm-2">
                         <img  src={item.imageUrl} alt={item.name}/>
@@ -48,7 +49,7 @@ var CartItem = React.createClass({
                             <p className="total-price">{this.countPrice(item).total} zł</p>
                             <p>Single price {this.countPrice(item).single} zł</p>
                         </div>
-                        <Discount  discount={item.discount}/>
+                        {item.discount !== "0" ? <Discount  discount={item.discount}/> : null }
                     </div>
                 </div>);
     }
