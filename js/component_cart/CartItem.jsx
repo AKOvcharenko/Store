@@ -3,7 +3,7 @@ var Counter = require('./../components_common/Counter');
 var Discount = require('./../components_common/Discount.jsx');
 var ReactRedux = require('react-redux');
 var store = require('./../store/store.js');
-var actionCounter = require('./../actions/actionCounter.js');
+var actionAddTobasket = require('./../actions/actionAddToBasket.js');
 
 
 function mapStateToProps(state) {
@@ -14,13 +14,17 @@ function mapStateToProps(state) {
 
 var CartItem = React.createClass({
     determineItem: function(){
-        debugger;
         var list = this.props.cartState;
         var sku = this.props.sku;
         return list.filter(function(el){if(el.sku === sku){return true;} return false;})[0];
     },
-    countSinglePrice: function(item){
-        return (item.price - item.price * item.discount / 100).toFixed(2);
+    removeItem: function(){
+        store.dispatch(actionAddTobasket.removeItem(this.props.sku));
+    },
+    countPrice: function(item){
+        var single = (item.price - item.price * item.discount / 100).toFixed(2);
+        var total = (single * item.value).toFixed(2);
+        return {single: single, total: total};
     },
     countTotalItemPrice: function(item){
         return (this.countSinglePrice(item) * item.value).toFixed(2);
@@ -37,11 +41,12 @@ var CartItem = React.createClass({
                     </div>
                     <div className="col-sm-4 vertical-aligner-center">
                         <Counter basketCounter="true" sku={this.props.sku}/>
+                        <span className="glyphicon glyphicon-trash" role="button" onClick={this.removeItem}></span>
                     </div>
                     <div className="col-sm-4 mtb-10 vertical-aligner-center">
                         <div className="text-right price">
-                            <p className="total-price">{this.countTotalItemPrice(item)} zł</p>
-                            <p>Single price {this.countSinglePrice(item)} zł</p>
+                            <p className="total-price">{this.countPrice(item).total} zł</p>
+                            <p>Single price {this.countPrice(item).single} zł</p>
                         </div>
                         <Discount  discount={item.discount}/>
                     </div>

@@ -23,6 +23,7 @@ function modifyCartState(state, sku, number){
     var alreadyInBasket;
     var result = state.slice();
     result = result.filter(function(el){if(el.sku === sku){addedItem = el; return false;} return true;});
+    if(number === 0) return result;
     alreadyInBasket = addedItem ? parseInt(addedItem.value) : 0;
     alreadyInBasket += number;
     result.push(determineFullItemParams(sku, alreadyInBasket));
@@ -35,6 +36,8 @@ function addToBasket(state, action){
     switch (action.type) {
         case "AddToBasket":
             return modifyCartState(state, action.sku, action.number);
+        case "RemoveItem":
+            return modifyCartState(state, action.sku, 0);
         case "DirectCartModify":
             return modifyCartState(state, action.sku, action.number);
         default:

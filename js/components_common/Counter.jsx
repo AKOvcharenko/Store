@@ -39,7 +39,7 @@ var Counter = React.createClass({
                         <input type="text" onChange={this.emptyFunc}  className="text-center form-control input-number" id={this.props.sku} value={counterData.value}/>
                         <button onClick={this.changeQuantity} disabled={counterData.plusDisabled} type="button" className="btn btn-primary btn-circle btn-number" data-type="plus">
                             <span className="glyphicon glyphicon-plus"></span>
-                        </button>
+                        </button>                        
                     </div>
                 </div>);
     }

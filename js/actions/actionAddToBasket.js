@@ -14,7 +14,15 @@ function directModify(sku, number){
     }
 }
 
+function removeItem(sku){
+    return {
+        type: "RemoveItem",
+        sku: sku
+    }
+}
+
 module.exports = {
     addToBasket: addToBasket,
-    directModify: directModify
+    directModify: directModify,
+    removeItem: removeItem
 };

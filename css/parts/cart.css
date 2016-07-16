@@ -9,14 +9,40 @@
     margin-bottom: 20px;
 }
 
-.cart-item  img{
+.cart-item img{
     max-width: 100%;
 }
 
-.cart-item  .discount{
+.cart-item .discount{
     margin-top: 0;
 }
 
 .cart-item .mtb-10.vertical-aligner-center{
     justify-content: flex-end;
 }
+
+.checkout-price{
+    font-size: 20px;
+}
+
+.checkout-price span{
+    font-size: 25px;
+    margin: 0 10px 0 25px;
+}
+
+.cart-item .glyphicon-trash{
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.cart.row .container{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cart-empty{
+    font-size: 20px;
+}
+
+
+

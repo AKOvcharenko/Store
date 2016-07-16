@@ -1,5 +1,6 @@
 var React = require('react');
 var CartItem = require('./CartItem');
+var TotalPrice = require('./TotalPrice');
 var ReactRedux = require('react-redux');
 var store = require('./../store/store.js');
 var actionCounter = require('./../actions/actionCounter.js');
@@ -22,15 +23,6 @@ var Cart = React.createClass({
     defineId: function(){
         this.uniqueId = this.uniqueId || 0;
         return this.uniqueId++;
-
-        /*imageUrl={elem.imageUrl}
-         name={elem.name}
-         brand={elem.brand}
-         discount={elem.discount}
-         price={elem.price}
-         sku={elem.sku} */
-
-
     },
     eachItem: function(elem, index){
         return (<CartItem
@@ -40,12 +32,16 @@ var Cart = React.createClass({
     },
     render: function(){
         if(this.props.cartState.length){
-            return (<div className="cart row">
+            return (<div className="cart container row">
+                        <div className="row container">Your Cart</div>
                         {this.props.cartState.map(this.eachItem)}
+                        <TotalPrice/>
                      </div>)
         }
-
-        return <p>Basket is empty</p>
+        return (<div className="cart cart-empty container row">
+                    <div className="row container">Your Cart</div>
+                    <div className="alert alert-warning" role="alert">Basket is empty, but you still can try to buy something.</div>
+                </div>)
     }
 });
 
