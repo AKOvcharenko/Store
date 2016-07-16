@@ -14,7 +14,11 @@ var Board = React.createClass({
     componentWillMount: function(){
         store.dispatch(actionCounter.setPLPCounter());
     },
-    eachItem: function(elem, index){
+    defineId: function(){
+        this.uniqueId = this.uniqueId || 0;
+        return this.uniqueId++;
+    },
+    eachItem: function(elem){
         return (<Item imageUrl={elem.imageUrl}
                       name={elem.name}
                       brand={elem.brand}
@@ -23,17 +27,19 @@ var Board = React.createClass({
                       number={elem.number}
                       price={elem.price}
                       sku={elem.sku}
-                      key={index}>
-                </Item>)
+                      key={this.defineId()}>
+        </Item>)
     },
     render: function(){
         return (<div className="board col-sm-10">
-                    {this.props.list.map(this.eachItem)}
-                </div>)
+            {this.props.list.map(this.eachItem)}
+        </div>)
     }
 });
 
 Board = ReactRedux.connect(mapStateToProps)(Board);
 
 module.exports = Board;
+
+
 

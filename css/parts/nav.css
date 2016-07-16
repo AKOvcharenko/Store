@@ -1,5 +1,5 @@
 .navigation{
-    margin: 15px 0px;
+    margin: 15px 0;
 }
 
 .navigation a{
@@ -8,4 +8,23 @@
 
 .navigation span{
     font-size: 17px;
+}
+
+.navigation .basket-quantity{
+    font-size: 13px;
+    background: #337ab7;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 14px;
+    position: relative;
+    top: -13px;
+    left: -10px;
+}
+
+.navigation a:hover .basket-quantity,
+.navigation a:focus .basket-quantity{
+    background: #23527c;
 }

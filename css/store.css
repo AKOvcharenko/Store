@@ -354,7 +354,7 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 .navigation{
-    margin: 15px 0px;
+    margin: 15px 0;
 }
 
 .navigation a{
@@ -364,8 +364,27 @@
 .navigation span{
     font-size: 17px;
 }
+
+.navigation .basket-quantity{
+    font-size: 13px;
+    background: #337ab7;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 14px;
+    position: relative;
+    top: -13px;
+    left: -10px;
+}
+
+.navigation a:hover .basket-quantity,
+.navigation a:focus .basket-quantity{
+    background: #23527c;
+}
 body{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Questrial', sans-serif;
 }
 
@@ -410,7 +429,6 @@ body{
 }
 
 .product-details{
-    margin-top: 10px;
     font-size: 16px;
     margin-top: 20px;
 }
@@ -493,7 +511,6 @@ body{
 .price-part:before{
     content: ' ';
     width: 1px;
-    height: 20px;
     display: block;
     background: radial-gradient(ellipse at center, #bbb 0%,#fff 100%);
     position: absolute;

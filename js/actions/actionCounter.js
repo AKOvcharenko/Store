@@ -1,14 +1,23 @@
-function counterIncrement(sku){
+function counterReset(sku){
     return {
-        type: "CounterIncrement",
+        type: "CounterReset",
         sku: sku
     }
 }
 
-function counterDecrement(sku){
+function counterIncrement(sku, isBasket){
+    return {
+        type: "CounterIncrement",
+        sku: sku,
+        isBasket: !!isBasket
+    }
+}
+
+function counterDecrement(sku, isBasket){
     return {
         type: "CounterDecrement",
-        sku: sku
+        sku: sku,
+        isBasket: !!isBasket
     }
 }
 
@@ -31,5 +40,6 @@ module.exports = {
     counterDecrement: counterDecrement,
     counterIncrement: counterIncrement,
     setPLPCounter: setPLPCounter,
-    setBPCounter: setBPCounter
+    setBPCounter: setBPCounter,
+    counterReset: counterReset
 };

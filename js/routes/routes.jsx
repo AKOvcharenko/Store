@@ -2,14 +2,14 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRedirect = ReactRouter.IndexRedirect;
-
-
 var Shop = require('./../component_shop/Shop.jsx');
 var Board = require('./../component_board/Board.jsx');
 var Navigation = require('./../component_navigation/Navigation.jsx');
 var Modify = require('./../component_modify/Modify.jsx');
 var Cart = require('./../component_cart/Cart.jsx');
 var Error = require('./../component_404/Error.jsx');
+
+
 
 var Routing = (
     <Router>

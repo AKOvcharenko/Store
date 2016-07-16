@@ -23,7 +23,7 @@ function modifyCartState(state, sku, number){
     var alreadyInBasket;
     var result = state.slice();
     result = result.filter(function(el){if(el.sku === sku){addedItem = el; return false;} return true;});
-    if(number === 0) return result;
+    if(number === -42) return result;
     alreadyInBasket = addedItem ? parseInt(addedItem.value) : 0;
     alreadyInBasket += number;
     result.push(determineFullItemParams(sku, alreadyInBasket));
@@ -37,7 +37,7 @@ function addToBasket(state, action){
         case "AddToBasket":
             return modifyCartState(state, action.sku, action.number);
         case "RemoveItem":
-            return modifyCartState(state, action.sku, 0);
+            return modifyCartState(state, action.sku, -42); //The Ultimate Question of Life, the Universe, and Everything
         case "DirectCartModify":
             return modifyCartState(state, action.sku, action.number);
         default:

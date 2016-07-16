@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactRouter = require('react-router');
-Link = ReactRouter.Link;
+var Link = ReactRouter.Link;
 
 var Error = React.createClass({
     render: function(){
