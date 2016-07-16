@@ -1,0 +1,11 @@
+.error-page .alert{
+    font-size: 20px;
+}
+
+.error-page p{
+    font-size: 130px;
+}
+
+.error-page a{
+    text-decoration: none;
+}

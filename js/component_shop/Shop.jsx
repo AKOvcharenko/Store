@@ -8,6 +8,7 @@ var Board = require('./../component_board/Board.jsx');
 var Navigation = require('./../component_navigation/Navigation.jsx');
 var Modify = require('./../component_modify/Modify.jsx');
 var Cart = require('./../component_cart/Cart.jsx');
+var Error = require('./../component_404/Error.jsx');
 
 var Shop = React.createClass({
     getInitialProps: function(){
@@ -15,7 +16,8 @@ var Shop = React.createClass({
             navigation: Navigation,
             modify: Modify,
             board: Board,
-            cart: Cart
+            cart: Cart,
+            error: Error
         }
     },
     render: function(){
@@ -28,6 +30,7 @@ var Shop = React.createClass({
                         {this.props.board}
                     </div>                    
                         {this.props.cart}
+                        {this.props.error}
                 </div>
             </Provider>)
     }
