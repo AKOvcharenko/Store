@@ -2,6 +2,7 @@ var React = require('react');
 var ReactRedux = require('react-redux');
 var store = require('./../store/store.js');
 var actionCounter = require('./../actions/actionCounter.js');
+var actionAddTobasket = require('./../actions/actionAddToBasket.js');
 
 function mapStateToProps(state) {
     return {
@@ -11,7 +12,6 @@ function mapStateToProps(state) {
 
 var Counter = React.createClass({
     determineCounterData: function(){
-        
         var counterState = this.props.counterState;
         var sku = this.props.sku;
         return counterState.slice().filter(function(el){if(el.sku === sku){return true;} return false;})[0];
@@ -19,7 +19,13 @@ var Counter = React.createClass({
     changeQuantity : function(event){
         var button = event.currentTarget;
         var type = button.getAttribute('data-type');
+        var changeBasketWith;
         type === 'plus' ? store.dispatch(actionCounter.counterIncrement(this.props.sku)) : store.dispatch(actionCounter.counterDecrement(this.props.sku)) ;
+        if(this.props.basketCounter){
+            changeBasketWith = type === 'plus' ? 1 : -1;
+            store.dispatch(actionAddTobasket.directModify(this.props.sku, changeBasketWith));
+        }
+         
     },
     emptyFunc: function(){/*i created it because without onChange attr, input throw annoing notification*/},
     render: function(){

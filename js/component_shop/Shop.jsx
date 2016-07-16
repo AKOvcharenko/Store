@@ -21,11 +21,13 @@ var Shop = React.createClass({
     render: function(){
         return (
             <Provider store={store}>    
-                <div  id="store">
-                    {this.props.navigation}
-                    {this.props.modify}
-                    {this.props.board}
-                    {this.props.cart}
+                <div  id="store" className="row">
+                        {this.props.navigation}
+                    <div className="row">
+                        {this.props.modify}
+                        {this.props.board}
+                    </div>                    
+                        {this.props.cart}
                 </div>
             </Provider>)
     }

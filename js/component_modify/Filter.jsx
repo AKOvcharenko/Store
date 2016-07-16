@@ -18,7 +18,6 @@ var Filter = React.createClass({
         return options;
     },
     render: function(){
-        debugger;
         return (<div className="filter">
                     <div className="form-group">
                         <label htmlFor={this.props.id}>Filter By {this.props.type}</label>

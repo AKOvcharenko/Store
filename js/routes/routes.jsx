@@ -10,7 +10,6 @@ var Navigation = require('./../component_navigation/Navigation.jsx');
 var Modify = require('./../component_modify/Modify.jsx');
 var Cart = require('./../component_cart/Cart.jsx');
 
-debugger;
 var Routing = (
     <Router>
         <Route path="/" component={Shop}>

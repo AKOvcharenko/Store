@@ -20,7 +20,7 @@ var PricePart = React.createClass({
     addToBasket:function(){
         var addedItemInfo =  this.determineCounterData();
         var quantity = addedItemInfo.value;
-        store.dispatch(actionAddToBasket(this.props.sku, quantity));
+        store.dispatch(actionAddToBasket.addToBasket(this.props.sku, quantity));
     },
     render: function(){
         return (<div className="col-sm-4 price-part">

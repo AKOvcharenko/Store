@@ -1,5 +1,14 @@
+function clone(obj) {
+    if (null == obj || "object" != typeof obj) return obj;
+    var copy = obj.constructor();
+    for (var attr in obj) {
+        if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
+    }
+    return copy;
+}
+
 function storeFiltersState(state, filterType, value){
-    var result = Object.assign({}, state);
+    var result = clone(state);
     
     result[filterType] = value;
 

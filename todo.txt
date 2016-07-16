@@ -1,2 +1,3 @@
+drop counters to 1 when youa dded item
 check how i can minimize core.js
 fix css for ie 10

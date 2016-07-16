@@ -1,6 +1,6 @@
 var React = require('react');
-var ReactRedux = require('react-redux');
 var CartItem = require('./CartItem');
+var ReactRedux = require('react-redux');
 var store = require('./../store/store.js');
 var actionCounter = require('./../actions/actionCounter.js');
 
@@ -13,11 +13,9 @@ function mapStateToProps(state) {
 
 var Cart = React.createClass({
     componentWillMount: function(){
-        debugger;
         store.dispatch(actionCounter.setBPCounter(this.props.cartState));
     },
     shouldComponentUpdate: function(){
-        debugger;
         store.dispatch(actionCounter.setBPCounter(this.props.cartState));
         return true;
     },
@@ -25,21 +23,24 @@ var Cart = React.createClass({
         this.uniqueId = this.uniqueId || 0;
         return this.uniqueId++;
 
+        /*imageUrl={elem.imageUrl}
+         name={elem.name}
+         brand={elem.brand}
+         discount={elem.discount}
+         price={elem.price}
+         sku={elem.sku} */
+
 
     },
-    eachItem: function(elem){
-        return (<CartItem imageUrl={elem.imageUrl}
-                      name={elem.name}
-                      brand={elem.brand}
-                      discount={elem.discount}
-                      price={elem.price}
-                      sku={elem.sku}                              
-                      key={this.defineId()}>
+    eachItem: function(elem, index){
+        return (<CartItem
+                      sku={elem.sku}
+                      key={index}>
                 </CartItem>)
     },
     render: function(){
         if(this.props.cartState.length){
-            return (<div className="cart">
+            return (<div className="cart row">
                         {this.props.cartState.map(this.eachItem)}
                      </div>)
         }

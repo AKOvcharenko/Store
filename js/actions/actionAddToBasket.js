@@ -6,4 +6,15 @@ function addToBasket(sku, number){
     }
 }
 
-module.exports = addToBasket;
+function directModify(sku, number){
+    return {
+        type: "DirectCartModify",
+        sku: sku,
+        number: number
+    }
+}
+
+module.exports = {
+    addToBasket: addToBasket,
+    directModify: directModify
+};
