@@ -7,6 +7,10 @@ var actionModifyList = require('./../actions/actionModifyList.js');
 var store = require('./../store/store.js');
 
 var Modify = React.createClass({
+    componentWillMount: function(){
+        store.dispatch(actionFilter.resetFilters());
+        store.dispatch(actionModifyList(this.props.filterState));
+    },
     changeHandler: function(type, value){
         store.dispatch(actionFilter(type, value));
         store.dispatch(actionModifyList(this.props.filterState));

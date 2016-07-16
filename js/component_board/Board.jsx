@@ -11,10 +11,6 @@ function mapStateToProps(state) {
 }
 
 var Board = React.createClass({
-    defineId: function(){
-        this.uniqueId = this.uniqueId || 0;
-        return this.uniqueId++;
-    },
     componentWillMount: function(){
         store.dispatch(actionCounter.setPLPCounter());
     },
@@ -27,7 +23,7 @@ var Board = React.createClass({
                       number={elem.number}
                       price={elem.price}
                       sku={elem.sku}
-                      key={this.defineId()}>
+                      key={index}>
                 </Item>)
     },
     render: function(){

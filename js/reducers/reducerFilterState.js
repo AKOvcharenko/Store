@@ -15,11 +15,17 @@ function storeFiltersState(state, filterType, value){
     return result;
 }
 
+function resetFilters(){
+    return {search: '', filterBrand: '', filterCat:'', sort:''};
+}
+
 function filterState(state, action){
     state = state || {search: '', filterBrand: '', filterCat:'', sort:''};
     switch (action.type) {
         case "StoreFilterState":
             return storeFiltersState(state, action.filterType, action.value);
+        case "ResetFilters":
+            return resetFilters();
         default:
             return state;
     }

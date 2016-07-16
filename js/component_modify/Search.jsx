@@ -6,7 +6,7 @@ var store = require('./../store/store.js');
 var Search = React.createClass({
     makeASearch: function(event){
         var value = event.target.value;
-        store.dispatch(actionFilterState('search', value));
+        store.dispatch(actionFilterState.filterApplayed('search', value));
         store.dispatch(actionModifyList(store.getState().filterState));
     },
     render: function(){

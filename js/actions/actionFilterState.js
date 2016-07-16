@@ -6,4 +6,13 @@ function filterApplayed(filterType, value){
     }
 }
 
-module.exports = filterApplayed;
+function resetFilters(){
+    return {
+        type: "ResetFilters"
+    }
+}
+
+module.exports = {
+    filterApplayed: filterApplayed,
+    resetFilters: resetFilters
+};

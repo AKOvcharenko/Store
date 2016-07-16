@@ -10,7 +10,7 @@ var Select = React.createClass({
     },
     changeHandler: function(event) {
         var select = event.target;
-        store.dispatch(actionFilterState(select.id, select.value));
+        store.dispatch(actionFilterState.filterApplayed(select.id, select.value));
         store.dispatch(actionModifyList(store.getState().filterState));
     },
     render: function(){
