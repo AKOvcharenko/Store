@@ -5,7 +5,8 @@ var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
-var uglifyify = require('uglifyify');
+var uglify = require('gulp-uglify');
+var buffer = require('vinyl-buffer');
 
 gulp.task('buildJS', function() {
     var bundler = watchify(browserify({
@@ -24,6 +25,8 @@ gulp.task('buildJS', function() {
             .bundle()
             .on('error', gutil.log.bind(gutil, 'Browserify Error'))
             .pipe(source('app.js'))
+            .pipe(buffer())
+            .pipe(uglify())
             .pipe(gulp.dest('./'));
     }
     build();

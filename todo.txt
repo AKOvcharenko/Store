@@ -1,3 +1,1 @@
-drop counters to 1 when you added item
-check how i can minimize core.js
-fix css for ie 10
+

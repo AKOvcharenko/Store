@@ -44,7 +44,6 @@ body{
 }
 
 .product-details{
-    margin-top: 10px;
     font-size: 16px;
     margin-top: 20px;
 }
@@ -127,7 +126,6 @@ body{
 .price-part:before{
     content: ' ';
     width: 1px;
-    height: 20px;
     display: block;
     background: radial-gradient(ellipse at center, #bbb 0%,#fff 100%);
     position: absolute;
