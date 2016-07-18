@@ -22,7 +22,10 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp-webserver": "^0.9.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

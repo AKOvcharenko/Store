@@ -7,6 +7,17 @@ var watchify = require('watchify');
 var reactify = require('reactify');
 var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
+var browserSync = require('browser-sync');
+
+gulp.task('server', function() {
+    browserSync({
+        server: {
+            baseDir: './'
+        },
+        port: 3000,
+        open: 'local'
+    });
+});
 
 gulp.task('buildJS', function() {
     var bundler = watchify(browserify({
@@ -43,7 +54,7 @@ gulp.task('watch', function(){
     gulp.watch('./css/parts/*.css', ['buildCSS']);
 });
 
-gulp.task('default', ['buildJS', 'buildCSS', 'watch']);
+gulp.task('default', ['buildJS', 'buildCSS', 'watch', 'server']);
 
 
 
