@@ -1,4 +1,5 @@
 var ReactRouter = require('react-router');
+var History = ReactRouter.hashHistory;
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRedirect = ReactRouter.IndexRedirect;
@@ -12,7 +13,7 @@ var Error = require('./../component_404/Error.jsx');
 
 
 var Routing = (
-    <Router>
+    <Router history={ History }>
         <Route path="/" component={Shop}>
             <IndexRedirect to="/plp" />
             <Route path="/plp" component={{navigation: Navigation, modify: Modify, board: Board}}/>
