@@ -9,11 +9,11 @@ var store = require('./../store/store.js');
 var Modify = React.createClass({
     componentWillMount: function(){
         store.dispatch(actionFilter.resetFilters());
-        store.dispatch(actionModifyList(this.props.filterState));
+        store.dispatch(actionModifyList(store.getState().filterState));
     },
     changeHandler: function(type, value){
         store.dispatch(actionFilter(type, value));
-        store.dispatch(actionModifyList(this.props.filterState));
+        store.dispatch(actionModifyList(store.getState().filterState));
     },
     render: function(){
         return (<div className="modify col-sm-2">

@@ -9,18 +9,19 @@ function clone(obj) {
 
 function storeFiltersState(state, filterType, value){
     var result = clone(state);
-    
+
     result[filterType] = value;
+    if(filterType !== 'pagination') result.pagination = {activePage: 0, perPage: 5};
 
     return result;
 }
 
 function resetFilters(){
-    return {search: '', filterBrand: '', filterCat:'', sort:''};
+    return {search: '', filterBrand: '', filterCat:'', sort:'', pagination: {activePage: 0, perPage: 5}};
 }
 
 function filterState(state, action){
-    state = state || {search: '', filterBrand: '', filterCat:'', sort:''};
+    state = state || {search: '', filterBrand: '', filterCat:'', sort:'', pagination: {activePage: 0, perPage: 5}};
     switch (action.type) {
         case "StoreFilterState":
             return storeFiltersState(state, action.filterType, action.value);

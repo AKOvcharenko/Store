@@ -16,6 +16,11 @@ var modifyMethods = {
         if (!type || type === 'Select a method') return;
         var comparingKey = type === 'Alphabetically' ? 'name' : 'brand';
         return first[comparingKey] > second[comparingKey] ? 1 : -1;
+    },
+    pagination: function(value, item, index, array){
+        var perPage = value.perPage;
+        var activePage = value.activePage;
+        return (index < (perPage + perPage*activePage) && index >= (perPage*activePage));
     }
 };
 
