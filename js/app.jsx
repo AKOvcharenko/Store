@@ -5,5 +5,4 @@ var Routing = require('./routes/routes.jsx');
 
 
 ReactDOM.render(Routing,document.getElementById('wrapper'));
-//ReactDOM.render(<Provider store={store}><Shop/></Provider>,document.getElementById('wrapper'));
 
